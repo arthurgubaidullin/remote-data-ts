@@ -11,20 +11,25 @@ npm install @arthurgubaidullin/remote-data-ts --save
 ## Usage
 
 ```ts
-import * as RemoteData from "@arthurgubaidullin/remote-data-ts";
-import { type RemoteData } from "@arthurgubaidullin/remote-data-ts";
+import * as RD from "@arthurgubaidullin/remote-data-ts";
 
 type Todo = {
   content: string;
 };
 
-let state: RemoteData<Todo, Error> = RemoteData.initial();
+let state: RD.RemoteData<Todo, Error> = RD.initial();
 
-state = RemoteData.pending();
+if (RD.isInitial(state) || RD.isError(state) || RD.isOk(state)) {
+  state = RD.pending();
+}
 
-state = RemoteData.ok({ content: "Eat cookies!" });
+if (RD.isPending(state)) {
+  state = RD.ok({ content: "Eat cookies!" });
+}
 
-state = RemoteData.error(new Error("No cookies!"));
+if (RD.isPending(state)) {
+  state = RD.error(new Error("No cookies!"));
+}
 ```
 
 ## License
