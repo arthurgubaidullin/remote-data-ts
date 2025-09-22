@@ -1,1 +1,1 @@
-export * from "./type.js";
+export { type RemoteData } from "./type.js";
