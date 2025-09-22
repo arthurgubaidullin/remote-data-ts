@@ -1,1 +1,1 @@
-export const add = (a: number, b: number): number => a + b;
+export { type RemoteData } from "./remote-data/index.js";
