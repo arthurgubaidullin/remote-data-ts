@@ -10,7 +10,7 @@
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.0",
     "vitest": "^3.2.4",
-    "@arthurgubaidullin/pipe-ts": "^0.1.1"
+    "@arthurgubaidullin/pipe-ts": "^0.1.5"
   },
   "files": [
     "dist/**/*.js",
